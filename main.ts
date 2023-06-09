@@ -1,7 +1,8 @@
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
         allumer_la_lampe = !(allumer_la_lampe)
-    } else if (allumer_la_lampe) {
+    }
+    if (allumer_la_lampe) {
         pins.analogWritePin(AnalogPin.P0, 1023)
     } else {
         pins.digitalWritePin(DigitalPin.P0, 0)
